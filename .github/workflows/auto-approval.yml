@@ -1,4 +1,4 @@
-name: Auto approval
+name: Auto approval...
 
 on: [deployment, workflow_dispatch]
 
