@@ -14,5 +14,4 @@ jobs:
             item1
             item2
           actor_allow_list: |
-            dependabot[bot]
             srinin01
