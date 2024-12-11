@@ -1,0 +1,26 @@
+name: Go matrix go
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+   
+  deploy:
+    name: Deploy to Environments
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        environment: [item1, item2]
+
+    environment: ${{ matrix.environment }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Add steps to build and package your application
+
+      - name: Deploy to ${{ matrix.environment }} environment
+        run: |
+          echo "I run post approval for ${{ matrix.environment }}"
